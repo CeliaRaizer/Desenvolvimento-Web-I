@@ -27,6 +27,7 @@ td,th{
 
 img{
     border-radius: 50%;
+    border: 8px solid rgb(208, 236, 140);
 }
 
 button, input[type="submit"]{
