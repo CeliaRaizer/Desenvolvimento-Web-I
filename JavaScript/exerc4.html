@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação simples com if</title>
+</head>
+<body>
+    <!--Faça um formulário com um campo de número para idade e um botão enviar. 
+    Quando o usuário enviar, exiba uma mensagem que diga se ele é maior ou menor de idade (18 anos),
+     usando estrutura condicional if.-->
+
+    <H1>Formulário de idade</H1>
+
+    <form id="formulario">
+        <label for="idade">Idade:</label>
+        <input type="text" id="idade" required>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <p id="resultado"></p> <!--mostra o resultado-->
+
+    <script>
+        const formulario = document.getElementById('formulario')
+        const resultado = document.getElementById('resultado')
+
+        formulario.addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio do formulário
+
+        const idade = document.getElementById('idade').value;
+
+        if(idade >= 18){
+            resultado.textContent = "Você é maior de idade.";
+        }else{
+            resultado.textContent = "Você é menor de idade.";
+        }
+    });    
+    </script>
+</body>
+</html>

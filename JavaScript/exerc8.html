@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MegaSena</title>
+</head>
+<body>
+    <!--Crie um programa que gere 6 números aleatórios entre 1 e 60 (sem repetição) e 
+    exiba esses números na página. Use Math.random() para gerar os números e Set para 
+    garantir que não haja repetições.-->
+
+    <h1>MegaSena</h1>
+
+    <button id="sortear">Sortear</button>
+    <p id="resultado"></p>
+
+    <script>
+        const botao = document.getElementById("sortear");
+        const resultado = document.getElementById("resultado");
+
+        botao.addEventListener("click", () => {
+        const numeros = new Set();
+
+      
+        while (numeros.size < 6) {
+            const aleatorio = Math.floor(Math.random() * 60) + 1; // 1 a 60
+            numeros.add(aleatorio);
+        }
+    
+        const lista = Array.from(numeros);
+        resultado.textContent = `Seus números são: ${lista.join(", ")}`;
+
+        });
+    </script>
+
+</body>
+</html>

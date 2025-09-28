@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de classes CSS</title>
+    
+    <style>
+        .classe{
+            color: pink;
+            font-size: 36px;
+        }
+    </style>
+</head>
+<body>
+    <!--Crie uma página com um botão que, ao ser clicado, adicione ou remova uma classe CSS 
+    de um elemento (ex: mudar a cor do texto ou o tamanho da fonte). Use classList.add() e 
+    classList.remove() para manipular as classes.-->
+
+    <h1 id="titulo">Manipulando classes</h1>
+    <button id="adicionar">Adicionar classe</button>
+    <button id="remover">Remover Classe</button>
+
+    <script>
+        const titulo = document.getElementById('titulo')
+        const btadicionar = document.getElementById('adicionar')
+        const btremover = document.getElementById('remover')
+
+        btadicionar.addEventListener('click', () =>{
+            titulo.classList.add('classe')
+        })
+
+        btremover.addEventListener('click', () => {
+            titulo.classList.remove('classe');
+        });
+    </script>
+</body>
+</html>

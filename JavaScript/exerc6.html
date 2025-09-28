@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de eventos</title>
+</head>
+<body>
+    <!--Crie uma página com um botão que, ao ser clicado, exiba um alerta com uma mensagem personalizada.
+    Use o método addEventListener para associar o evento de clique ao botão.-->
+
+    <h1>Manipulação de eventos!</h1>
+    <button id="botao">Clique</button>
+
+    <script>
+        const botao = document.getElementById('botao')
+
+        botao.addEventListener('click', () =>{
+            window.alert('Botão foi clicado')
+        });
+    </script>
+
+</body>
+</html>
