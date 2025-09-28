@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista dinâmica</title>
+</head>
+<body>
+
+    <input type="text" id=nome placeholder="Digite seu nome">
+    <button id="enviar">Enviar</button>
+
+    <ul id="lista"></ul>
+
+    <script>
+        const input = document.getElementById('nome');
+        const botao = document.getElementById('enviar');
+        const lista = document.getElementById('lista');
+
+        botao.addEventListener("click", function() {
+            const valor = input.value.trim(); 
+
+            if (valor !== "") { 
+                const li = document.createElement("li"); 
+                li.textContent = valor;
+                lista.appendChild(li); 
+                input.value = "";
+                input.focus(); 
+            } 
+        });
+    </script>
+</body>
+</html>

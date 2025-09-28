@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando var, let e const</title>
+</head>
+<body>
+    <script>
+        var nome = 'Pedro' //pode ser alterado
+        let idade = 25 //pode ser reatribuido
+        const pi = 3.14 //não pode ser reatribuido depois da criação
+
+        nome='Lucas' //var nome que antes era pedro agora é = Lucas
+        idade = 30  // let = 30
+        pi = 3.15 //gera erro
+
+        window.alert(`Var nome = ${nome}`) //exibiu lucas
+        window.alert(`Var idade = ${idade}`) //exibiu 30
+        window.alert(`Var pi = ${pi}`) //não executou pelo erro
+    </script>
+</body>
+</html>
